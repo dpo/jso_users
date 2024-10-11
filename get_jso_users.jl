@@ -16,7 +16,7 @@ end
 for name ∈ keys(dependents)
     @info "" name, dependents[name]
 
-    if length(dependents[name] > 0)
+    if length(dependents[name]) > 0
         open(name * "-dependents.txt", "w") do f
             for dep ∈ dependents[name]
                 println(f, dep)
